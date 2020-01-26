@@ -1,0 +1,47 @@
+{
+  "name": "mock-epl-api",
+  "version": "1.0.0",
+  "description": "API that serves the latest scores of fixtures of matches in a “Mock Premier League”.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mecsoccer/mock-epl-api.git"
+  },
+  "author": "Jaachimma Onyenze",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mecsoccer/mock-epl-api/issues"
+  },
+  "homepage": "https://github.com/mecsoccer/mock-epl-api#readme",
+  "dependencies": {
+    "@babel/cli": "^7.8.3",
+    "@babel/core": "^7.8.3",
+    "@babel/node": "^7.8.3",
+    "@babel/preset-env": "^7.8.3",
+    "@babel/register": "^7.8.3",
+    "bcryptjs": "^2.4.3",
+    "chai": "^4.2.0",
+    "chai-http": "^4.3.0",
+    "connect-redis": "^4.0.3",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-session": "^1.17.0",
+    "jsonwebtoken": "^8.5.1",
+    "mocha": "^7.0.1",
+    "morgan": "^1.9.1",
+    "pg": "^7.17.1",
+    "redis": "^2.8.0",
+    "uniqid": "^5.2.0",
+    "uuid": "^3.4.0"
+  },
+  "devDependencies": {
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-plugin-import": "^2.20.0",
+    "nodemon": "^2.0.2"
+  }
+}
