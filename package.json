@@ -4,6 +4,10 @@
   "description": "API that serves the latest scores of fixtures of matches in a “Mock Premier League”.",
   "main": "index.js",
   "scripts": {
+    "start": "node ./build/index.js",
+    "dev": "nodemon --exec babel-node ./src/index.js",
+    "build-babel": "babel --out-dir ./build --source-maps --copy-files ./src",
+    "build": "mkdir build && npm run build-babel",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
