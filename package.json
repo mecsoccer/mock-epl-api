@@ -6,9 +6,12 @@
   "scripts": {
     "start": "node ./build/index.js",
     "dev": "nodemon --exec babel-node ./src/index.js",
+    "migrate": "babel-node ./src/models/migration.js",
+    "unmigrate": "babel-node ./src/models/unmigrate.js",
+    "migration": "npm run unmigrate && npm run migrate",
     "build-babel": "babel --out-dir ./build --source-maps --copy-files ./src",
     "build": "mkdir build && npm run build-babel",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "npm run migration && npx mocha --exit --timeout 20000 ./src/test/*.js --require @babel/register"
   },
   "repository": {
     "type": "git",
