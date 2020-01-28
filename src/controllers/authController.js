@@ -2,9 +2,7 @@
 import jwt from 'jsonwebtoken';
 import dotenv from 'dotenv';
 import bcrypt from 'bcryptjs';
-import uniqId from 'uniqid';
-import uuidv4 from 'uuid/v4';
-import pool from '../models/migration';
+import pool from '../models/migrate';
 
 dotenv.config();
 
@@ -41,7 +39,7 @@ export const signIn = (req, res) => {
         return res.status(401).json({ status: 'failed', error: 'wrong email or password' });
       }
 
-      const token = jwt.sign(user, secret, { expiresIn: '72hr' });
+      const token = jwt.sign(user, secret, { expiresIn: '1hr' });
       delete user.password;
       user.token = token;
 
